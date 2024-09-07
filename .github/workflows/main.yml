@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: '* * * * *'  # Ejecutar cada hora (formato cron)
+    - cron: '0 * * * *'  # Ejecutar cada hora
 
 jobs:
   run-python-script:
@@ -17,5 +17,9 @@ jobs:
       with:
         python-version: '3.x'  # Usa la versión de Python 3.x
 
+    - name: List files
+      run: ls -la  # Listar archivos en el directorio actual
+
     - name: Run script
-      run: python hello_world.py
+      run: python hello_world.py  # Ejecutar el script Python
+
