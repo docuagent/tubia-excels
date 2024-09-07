@@ -18,4 +18,4 @@ jobs:
         python-version: '3.x'  # Usa la versión de Python 3.x
 
     - name: Run script
-      run: hello_world.py
+      run: python hello_world.py
