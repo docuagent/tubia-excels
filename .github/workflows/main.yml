@@ -1,0 +1,21 @@
+name: Run Python Script
+
+on:
+  schedule:
+    - cron: '* * * * *'  # Ejecutar cada hora (formato cron)
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # Usa la versión de Python 3.x
+
+    - name: Run script
+      run: hello_world.py
